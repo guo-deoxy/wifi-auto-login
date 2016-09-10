@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GvX-G5-3Kh">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--TokyoTech WiFi-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="mainView" id="BYZ-38-t0r" customClass="ViewController" customModule="myApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Emd-SK-geD">
+                                <rect key="frame" x="0.0" y="64" width="600" height="240"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Emd-SK-geD" secondAttribute="trailing" constant="-20" id="PNK-mN-djO"/>
+                            <constraint firstItem="Emd-SK-geD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="WDS-hq-esX"/>
+                            <constraint firstItem="Emd-SK-geD" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="iBR-i6-0az"/>
+                            <constraint firstItem="Emd-SK-geD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="w9d-lU-cvh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="TokyoTech WiFi" id="qF5-jn-ulj">
+                        <barButtonItem key="rightBarButtonItem" title="設定" id="ZR7-pZ-qdp">
+                            <connections>
+                                <segue destination="1Ee-ZN-QUp" kind="presentation" id="Yvb-PD-LIe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="Emd-SK-geD" id="FrX-T6-Fkh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069" y="265"/>
+        </scene>
+        <!--Config-->
+        <scene sceneID="1hl-Qo-8YO">
+            <objects>
+                <tableViewController title="Config" id="Xkx-Vt-3Nu" customClass="ConfigViewController" customModule="myApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" sectionIndexMinimumDisplayRowCount="2" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="xkC-Bl-Gzg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" red="0.86460306190000003" green="0.86460306190000003" blue="0.86460306190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.97378077649999994" green="0.97378077649999994" blue="0.97378077649999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="学籍番号" id="oGW-B3-VCF">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Z71-XQ-cac">
+                                        <rect key="frame" x="0.0" y="114" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z71-XQ-cac" id="3rU-tV-FrE">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kwy-QX-bnG">
+                                                    <rect key="frame" x="8" y="0.0" width="584" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="kwy-QX-bnG" secondAttribute="bottom" constant="-8" id="Ruk-GF-Z6e"/>
+                                                <constraint firstItem="kwy-QX-bnG" firstAttribute="trailing" secondItem="3rU-tV-FrE" secondAttribute="trailingMargin" id="VUf-zE-Cdj"/>
+                                                <constraint firstItem="kwy-QX-bnG" firstAttribute="top" secondItem="3rU-tV-FrE" secondAttribute="topMargin" constant="-8" id="aFc-NO-6gv"/>
+                                                <constraint firstItem="kwy-QX-bnG" firstAttribute="leading" secondItem="3rU-tV-FrE" secondAttribute="leadingMargin" id="bKo-Fn-JFg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="password" id="Ho1-9r-iIe">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Zwk-da-WjM">
+                                        <rect key="frame" x="0.0" y="209" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zwk-da-WjM" id="QHn-Hm-l3K">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SY3-pA-xwl">
+                                                    <rect key="frame" x="8" y="0.0" width="584" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="SY3-pA-xwl" secondAttribute="bottom" constant="-8" id="LMS-4s-CM4"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="SY3-pA-xwl" secondAttribute="trailing" id="Qgc-nx-g1A"/>
+                                                <constraint firstItem="SY3-pA-xwl" firstAttribute="top" secondItem="QHn-Hm-l3K" secondAttribute="topMargin" constant="-8" id="Vsm-3Y-gSD"/>
+                                                <constraint firstItem="SY3-pA-xwl" firstAttribute="leading" secondItem="QHn-Hm-l3K" secondAttribute="leadingMargin" id="qC5-4h-YvO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Xkx-Vt-3Nu" id="lDe-wz-idN"/>
+                            <outlet property="delegate" destination="Xkx-Vt-3Nu" id="fNv-iE-uwi"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="設定" id="Qnb-aR-xSV">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="wEI-Nh-5ha">
+                            <connections>
+                                <action selector="returnMainView:" destination="Xkx-Vt-3Nu" id="N7K-l4-Lgi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="StudentNumberField" destination="kwy-QX-bnG" id="LOg-xf-o5u"/>
+                        <outlet property="passwordField" destination="SY3-pA-xwl" id="ZCi-V0-A9N"/>
+                        <outlet property="studentNumberField" destination="kwy-QX-bnG" id="F4M-fe-3U2"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sYC-2Z-0gr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069" y="1166"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H40-zG-tXm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Ee-ZN-QUp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="aHf-Ph-dBT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xkx-Vt-3Nu" kind="relationship" relationship="rootViewController" id="xId-kO-mdt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zeS-nj-VGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="231" y="1166"/>
+        </scene>
+        <!--TokyoTech Wifi-->
+        <scene sceneID="G2P-0m-5Ez">
+            <objects>
+                <navigationController title="TokyoTech Wifi" automaticallyAdjustsScrollViewInsets="NO" id="GvX-G5-3Kh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="7aw-Mz-F5x">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="IkC-Yr-Ybk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ON-aL-65N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="257" y="265"/>
+        </scene>
+    </scenes>
+</document>
